@@ -6,7 +6,7 @@ int[] GetArray(int length, int minValue, int maxValue)
 {
     int[] array = new int[length];
     Console.Write("{");
-    for(int i = 0; i < length - 1; i++)
+    for (int i = 0; i < length - 1; i++)
     {
         array[i] = new Random().Next(minValue, maxValue + 1);
         Console.Write($"{array[i]}, ");
@@ -16,4 +16,28 @@ int[] GetArray(int length, int minValue, int maxValue)
 }
 
 int[] array = GetArray(12, -9, 9);
+GetSum(array);
+
+
+void GetSum(int[] array)
+{
+    int positiveSum = 0;
+    int negativeSum = 0;
+    foreach (int el in array)
+    {
+        if (el > 0)
+        {
+            positiveSum += el;
+        }
+        else
+        {
+            negativeSum += el;
+        }
+    }
+    Console.WriteLine();
+    Console.WriteLine($"Сумма положительных чисел = {positiveSum}, сумма отрицательных чисел = {negativeSum}");
+
+}
+
+
 
