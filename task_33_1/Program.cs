@@ -25,11 +25,12 @@ void FindNumArray(int[] array, int num)
     bool check = false;
     foreach(int el in array)
     {
-        if(el == num || el == -num)
+        if(el == Math.Abs(num))
         {
             Console.WriteLine($"{num}; массив [{String.Join(" ", array)}] --> да");
             check = true;
-            break;
+            break; // можно и без break, тогда команду Console.Write на 30 строке вырезаем и добавляем её 
+            // после цикла foreach с условием if(check == true)
         }
     }
     if(check == false)

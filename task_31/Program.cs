@@ -36,7 +36,6 @@ void GetSum(int[] array)
     }
     Console.WriteLine();
     Console.WriteLine($"Сумма положительных чисел = {positiveSum}, сумма отрицательных чисел = {negativeSum}");
-
 }
 
 
